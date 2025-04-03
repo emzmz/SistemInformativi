@@ -4,9 +4,14 @@ import streamlit as st
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+import os
+
+script_dir = os.path.dirname(os.path.abspath(__file__))
+os.chdir(script_dir)
+excel_file = os.path.join(script_dir, "Real estate valuation data set.xlsx")
 
 def load_data():
-    df = pd.read_excel(r"C:\Users\hp\Desktop\UNIVERSITY\sistemi informativi\Real estate valuation data set.xlsx")
+    df = pd.read_excel(excel_file)
     df = df.rename(columns={
         'X1 transaction date': 'transaction_date',
         'X2 house age': 'house_age',
