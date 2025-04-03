@@ -41,7 +41,7 @@ model2 = train_model2(df)
 # Streamlit
 
 st.title("Predizione dei Prezzi Immobiliari")
-st.write(" #### Questo studio si concentra nell'area geografica di Sindian Dist., New Taipei City e Taiwan")
+st.write(" #### Questo studio si concentra nell'area geografica di Sindian Dist., New Taipei City, Taiwan")
 
 scelta_modello = st.radio('Scegliere il modello con cui fare la prediction del prezzo:',
                            ('Modello 1: usa Latitudine e Longitudine.',
